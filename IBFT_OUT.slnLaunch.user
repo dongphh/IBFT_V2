@@ -1,0 +1,19 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "IBFTSocketService\\IBFTSocketService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "IBFTSocketService.LoadTester\\IBFTSocketService.LoadTester.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "IBFTSocketService.Monitoring\\IBFTSocketService.Monitoring.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

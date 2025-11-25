@@ -1,0 +1,15 @@
+F:\mastersource\IBFT_V2\IBFTSocketService.Data\bin\Release\net8.0\IBFTSocketService.Data.deps.json
+F:\mastersource\IBFT_V2\IBFTSocketService.Data\bin\Release\net8.0\IBFTSocketService.Data.dll
+F:\mastersource\IBFT_V2\IBFTSocketService.Data\bin\Release\net8.0\IBFTSocketService.Data.pdb
+F:\mastersource\IBFT_V2\IBFTSocketService.Data\bin\Release\net8.0\IBFTSocketService.Core.dll
+F:\mastersource\IBFT_V2\IBFTSocketService.Data\bin\Release\net8.0\IBFTSocketService.Core.pdb
+F:\mastersource\IBFT_V2\IBFTSocketService.Data\obj\Release\net8.0\IBFTSocketService.Data.csproj.AssemblyReference.cache
+F:\mastersource\IBFT_V2\IBFTSocketService.Data\obj\Release\net8.0\IBFTSocketService.Data.GeneratedMSBuildEditorConfig.editorconfig
+F:\mastersource\IBFT_V2\IBFTSocketService.Data\obj\Release\net8.0\IBFTSocketService.Data.AssemblyInfoInputs.cache
+F:\mastersource\IBFT_V2\IBFTSocketService.Data\obj\Release\net8.0\IBFTSocketService.Data.AssemblyInfo.cs
+F:\mastersource\IBFT_V2\IBFTSocketService.Data\obj\Release\net8.0\IBFTSocketService.Data.csproj.CoreCompileInputs.cache
+F:\mastersource\IBFT_V2\IBFTSocketService.Data\obj\Release\net8.0\IBFTSock.391277CD.Up2Date
+F:\mastersource\IBFT_V2\IBFTSocketService.Data\obj\Release\net8.0\IBFTSocketService.Data.dll
+F:\mastersource\IBFT_V2\IBFTSocketService.Data\obj\Release\net8.0\refint\IBFTSocketService.Data.dll
+F:\mastersource\IBFT_V2\IBFTSocketService.Data\obj\Release\net8.0\IBFTSocketService.Data.pdb
+F:\mastersource\IBFT_V2\IBFTSocketService.Data\obj\Release\net8.0\ref\IBFTSocketService.Data.dll

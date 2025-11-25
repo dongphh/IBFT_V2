@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "IBFTSocketService.LoadTester": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

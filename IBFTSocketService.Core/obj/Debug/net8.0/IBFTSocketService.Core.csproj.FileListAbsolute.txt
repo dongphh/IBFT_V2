@@ -1,0 +1,12 @@
+F:\mastersource\IBFT_V2\IBFTSocketService.Core\bin\Debug\net8.0\IBFTSocketService.Core.deps.json
+F:\mastersource\IBFT_V2\IBFTSocketService.Core\bin\Debug\net8.0\IBFTSocketService.Core.dll
+F:\mastersource\IBFT_V2\IBFTSocketService.Core\bin\Debug\net8.0\IBFTSocketService.Core.pdb
+F:\mastersource\IBFT_V2\IBFTSocketService.Core\obj\Debug\net8.0\IBFTSocketService.Core.csproj.AssemblyReference.cache
+F:\mastersource\IBFT_V2\IBFTSocketService.Core\obj\Debug\net8.0\IBFTSocketService.Core.GeneratedMSBuildEditorConfig.editorconfig
+F:\mastersource\IBFT_V2\IBFTSocketService.Core\obj\Debug\net8.0\IBFTSocketService.Core.AssemblyInfoInputs.cache
+F:\mastersource\IBFT_V2\IBFTSocketService.Core\obj\Debug\net8.0\IBFTSocketService.Core.AssemblyInfo.cs
+F:\mastersource\IBFT_V2\IBFTSocketService.Core\obj\Debug\net8.0\IBFTSocketService.Core.csproj.CoreCompileInputs.cache
+F:\mastersource\IBFT_V2\IBFTSocketService.Core\obj\Debug\net8.0\IBFTSocketService.Core.dll
+F:\mastersource\IBFT_V2\IBFTSocketService.Core\obj\Debug\net8.0\refint\IBFTSocketService.Core.dll
+F:\mastersource\IBFT_V2\IBFTSocketService.Core\obj\Debug\net8.0\IBFTSocketService.Core.pdb
+F:\mastersource\IBFT_V2\IBFTSocketService.Core\obj\Debug\net8.0\ref\IBFTSocketService.Core.dll
