@@ -13,3 +13,4 @@ F:\mastersource\IBFT_V2\IBFTSocketService.Data\obj\Debug\net8.0\ref\IBFTSocketSe
 F:\mastersource\IBFT_V2\IBFTSocketService.Data\bin\Debug\net8.0\IBFTSocketService.Core.dll
 F:\mastersource\IBFT_V2\IBFTSocketService.Data\bin\Debug\net8.0\IBFTSocketService.Core.pdb
 F:\mastersource\IBFT_V2\IBFTSocketService.Data\obj\Debug\net8.0\IBFTSock.391277CD.Up2Date
+F:\mastersource\IBFT_V2\IBFTSocketService.Data\obj\Debug\net8.0\IBFTSocketService.Data.sourcelink.json

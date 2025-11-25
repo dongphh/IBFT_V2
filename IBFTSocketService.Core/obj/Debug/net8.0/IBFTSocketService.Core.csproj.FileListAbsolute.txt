@@ -10,3 +10,4 @@ F:\mastersource\IBFT_V2\IBFTSocketService.Core\obj\Debug\net8.0\IBFTSocketServic
 F:\mastersource\IBFT_V2\IBFTSocketService.Core\obj\Debug\net8.0\refint\IBFTSocketService.Core.dll
 F:\mastersource\IBFT_V2\IBFTSocketService.Core\obj\Debug\net8.0\IBFTSocketService.Core.pdb
 F:\mastersource\IBFT_V2\IBFTSocketService.Core\obj\Debug\net8.0\ref\IBFTSocketService.Core.dll
+F:\mastersource\IBFT_V2\IBFTSocketService.Core\obj\Debug\net8.0\IBFTSocketService.Core.sourcelink.json

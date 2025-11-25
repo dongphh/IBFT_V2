@@ -15,3 +15,4 @@ F:\mastersource\IBFT_V2\IBFTSocketService.Monitoring\bin\Debug\net8.0\IBFTSocket
 F:\mastersource\IBFT_V2\IBFTSocketService.Monitoring\bin\Debug\net8.0\IBFTSocketService.Data.pdb
 F:\mastersource\IBFT_V2\IBFTSocketService.Monitoring\bin\Debug\net8.0\IBFTSocketService.Core.pdb
 F:\mastersource\IBFT_V2\IBFTSocketService.Monitoring\obj\Debug\net8.0\IBFTSock.E7B351FC.Up2Date
+F:\mastersource\IBFT_V2\IBFTSocketService.Monitoring\obj\Debug\net8.0\IBFTSocketService.Monitoring.sourcelink.json

@@ -4,7 +4,6 @@ using System.Net.Sockets;
 using System.Text;
 using IBFTSocketService.Core.Configuration;
 using IBFTSocketService.Data.Repository;
-using IBFTSocketService.Services;
 
 namespace SocketService
 {
@@ -13,8 +12,6 @@ namespace SocketService
         private readonly Socket _socket;
         private readonly IDataRepository _repository;
         private readonly ILogger<SocketClientHandler> _logger;
-        private readonly RequestResponseLogger _requestResponseLogger;
-        private readonly UnifiedLogger _unifiedLogger;
         private readonly byte[] _receiveBuffer;
         private readonly SocketServerConfig _config;
         private DateTime _lastActivityTime;
@@ -29,15 +26,11 @@ namespace SocketService
             Socket socket,
             IDataRepository repository,
             ILogger<SocketClientHandler> logger,
-            SocketServerConfig config,
-            RequestResponseLogger requestResponseLogger,
-            UnifiedLogger unifiedLogger)
+            SocketServerConfig config)
         {
             _socket = socket;
             _repository = repository;
             _logger = logger;
-            _requestResponseLogger = requestResponseLogger;
-            _unifiedLogger = unifiedLogger;
             _config = config;
             _receiveBuffer = new byte[config.ReceiveBufferSize];
             _lastActivityTime = DateTime.UtcNow;
@@ -220,19 +213,13 @@ namespace SocketService
                 { "RequestCount", _requestCount }
             }))
             {
-                // ✅ LOG REQUEST WITH UNIQUE ID
-                _logger.LogInformation("════════════════════════════════════════════════════════");
-                _logger.LogInformation("📨 REQUEST RECEIVED | LogID: {LogId} | Timestamp: {Timestamp}",
-                    logId, DateTime.UtcNow);
-                _logger.LogInformation("LogID: {LogId} | Client: {ClientId} | Request #{Count} | Size: {BytesRead} bytes",
-                    logId,clientId, _requestCount, bytesRead);
-                //_logger.LogInformation("Content (first 300 chars):");
-                //_logger.LogInformation("{RequestContent}",
-                //    request.Length > 300 ? request.Substring(0, 300) + "..." : request);
-                _logger.LogInformation("════════════════════════════════════════════════════════");
+                // ✅ LOG REQUEST WITH UNIQUE ID               
+                _logger.LogInformation("────────────────────────────────────────────────────────");
+                _logger.LogInformation("📨 REQUEST RECEIVED | LogID: {LogId} | Client: {ClientId} | Size: {BytesRead} bytes | Request body: {request}",
+                    logId,clientId, bytesRead,request);
 
                 var sw = Stopwatch.StartNew();
-                string response = null;
+                string? response = null;
                 bool success = false;
 
                 try
@@ -249,16 +236,10 @@ namespace SocketService
                     // ✅ SAVE RESPONSE TO DATABASE
                     await SaveResponseToDbAsync(logId, response, sw.ElapsedMilliseconds, success);
 
-                    // ✅ LOG REQUEST/RESPONSE TO UNIFIED FILE (atomic, no interleaving)
-                    await _unifiedLogger.LogTransactionAsync(
-                        logId, clientId, request, bytesRead, response, sw.ElapsedMilliseconds, success);
-
                     // ✅ LOG RESPONSE WITH UNIQUE ID
-                    _logger.LogInformation("────────────────────────────────────────────────────────");
-                    _logger.LogInformation("📤 RESPONSE SENT | Client: {ClientId} | LogID: {LogId} | Status: SUCCESS | Time: {Time}ms",
-                        clientId,logId,sw.ElapsedMilliseconds);
-                    //_logger.LogInformation("Client: {ClientId} | Status: SUCCESS | Time: {Time}ms",
-                    //    clientId, sw.ElapsedMilliseconds);
+                    
+                    _logger.LogInformation("📤 RESPONSE SENT | Client: {ClientId} | LogID: {LogId} | Status: SUCCESS | Time: {Time}ms | Response body: {response}",
+                        clientId,logId,sw.ElapsedMilliseconds,response);                    
                     _logger.LogInformation("────────────────────────────────────────────────────────");
                 }
                 catch (Exception ex)
@@ -274,7 +255,7 @@ namespace SocketService
                     await SaveResponseToDbAsync(logId, response, sw.ElapsedMilliseconds, false);
 
                     // ✅ LOG REQUEST/RESPONSE TO UNIFIED FILE (ERROR CASE - atomic, no interleaving)
-                    await _unifiedLogger.LogTransactionAsync(
+                   _logger.LogInformation(
                         logId, clientId, request, bytesRead, response, sw.ElapsedMilliseconds, false);
 
                     _logger.LogInformation("────────────────────────────────────────────────────────");
@@ -334,8 +315,8 @@ namespace SocketService
 
                 //await _repository.ExecuteNonQueryAsync(sql, parameters);
 
-                _logger.LogInformation("✅ REQUEST SAVED TO DB | LogID: {LogId} | Size: {Size} bytes | Timestamp: {Timestamp}",
-                    logId, requestSize, DateTime.UtcNow);
+                _logger.LogInformation("✅ REQUEST SAVED TO DB | LogID: {LogId} | Size: {Size} bytes",
+                    logId, requestSize);
             }
             catch (Exception ex)
             {
@@ -373,8 +354,8 @@ namespace SocketService
                 //await _repository.ExecuteNonQueryAsync(sql, parameters);
 
                 string status = success ? "SUCCESS" : "ERROR";
-                _logger.LogInformation("✅ RESPONSE SAVED TO DB | LogID: {LogId} | Status: {Status} | Time: {Time}ms | Size: {Size} bytes | Timestamp: {Timestamp}",
-                    logId, status, responseTime, responseXml.Length, DateTime.UtcNow);
+                _logger.LogInformation("✅ RESPONSE SAVED TO DB | LogID: {LogId} | Status: {Status} | Time: {Time}ms | Size: {Size} bytes",
+                    logId, status, responseTime, responseXml.Length);
             }
             catch (Exception ex)
             {

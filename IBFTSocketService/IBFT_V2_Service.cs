@@ -1,7 +1,6 @@
 ﻿using IBFTSocketService.Core.Configuration;
 using IBFTSocketService.Data.Repository;
 using IBFTSocketService.Monitoring;
-using IBFTSocketService.Services;
 using SocketService;
 using System.Collections.Concurrent;
 using System.Net.Sockets;
@@ -19,9 +18,7 @@ namespace IBFTSocketService
         private readonly ILogger<IBFT_V2_Service> _logger;
         private readonly ILoggerFactory _loggerFactory;
         private readonly PerformanceMonitor _monitor;
-        private readonly OracleConnectionPoolManager _poolManager;
-        private readonly RequestResponseLogger _requestResponseLogger;
-        private readonly UnifiedLogger _unifiedLogger;
+        private readonly OracleConnectionPoolManager _poolManager;        
         private Socket _listeningSocket;
         private int _activeConnections;
         private readonly ConcurrentDictionary<string, SocketClientHandler> _clients;
@@ -34,18 +31,15 @@ namespace IBFTSocketService
             ILogger<IBFT_V2_Service> logger,
             ILoggerFactory loggerFactory,
             PerformanceMonitor monitor,
-            OracleConnectionPoolManager poolManager,
-            RequestResponseLogger requestResponseLogger,
-            UnifiedLogger unifiedLogger)
+            OracleConnectionPoolManager poolManager
+            )
         {
             _config = config;
             _repository = repository;
             _logger = logger;
             _loggerFactory = loggerFactory;
             _monitor = monitor;
-            _poolManager = poolManager;
-            _requestResponseLogger = requestResponseLogger;
-            _unifiedLogger = unifiedLogger;
+            _poolManager = poolManager;            
             _clients = new ConcurrentDictionary<string, SocketClientHandler>();
             _isShuttingDown = false;
         }
@@ -207,7 +201,7 @@ namespace IBFTSocketService
                 // ✅ Create logger using ILoggerFactory
                 var clientLogger = _loggerFactory.CreateLogger<SocketClientHandler>();
 
-                handler = new SocketClientHandler(clientSocket, _repository, clientLogger, _config, _requestResponseLogger, _unifiedLogger);
+                handler = new SocketClientHandler(clientSocket, _repository, clientLogger, _config);
 
                 // Use try-catch to prevent exceptions in event handler from crashing
                 EventHandler<ClientDisconnectEventArgs> disconnectHandler = (s, e) =>

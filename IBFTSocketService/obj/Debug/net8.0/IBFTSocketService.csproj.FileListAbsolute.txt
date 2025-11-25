@@ -77,3 +77,4 @@ F:\mastersource\IBFT_V2\IBFTSocketService\obj\Debug\net8.0\ref\IBFTSocketService
 F:\mastersource\IBFT_V2\IBFTSocketService\bin\Debug\net8.0\appsettings.Development.json
 F:\mastersource\IBFT_V2\IBFTSocketService\bin\Debug\net8.0\appsettings.json
 F:\mastersource\IBFT_V2\IBFTSocketService\bin\Debug\net8.0\appsettings.Production.json
+F:\mastersource\IBFT_V2\IBFTSocketService\obj\Debug\net8.0\IBFTSocketService.sourcelink.json

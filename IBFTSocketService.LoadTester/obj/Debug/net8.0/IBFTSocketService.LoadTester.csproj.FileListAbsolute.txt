@@ -28,3 +28,4 @@ F:\mastersource\IBFT_V2\IBFTSocketService.LoadTester\obj\Debug\net8.0\refint\IBF
 F:\mastersource\IBFT_V2\IBFTSocketService.LoadTester\obj\Debug\net8.0\IBFTSocketService.LoadTester.pdb
 F:\mastersource\IBFT_V2\IBFTSocketService.LoadTester\obj\Debug\net8.0\IBFTSocketService.LoadTester.genruntimeconfig.cache
 F:\mastersource\IBFT_V2\IBFTSocketService.LoadTester\obj\Debug\net8.0\ref\IBFTSocketService.LoadTester.dll
+F:\mastersource\IBFT_V2\IBFTSocketService.LoadTester\obj\Debug\net8.0\IBFTSocketService.LoadTester.sourcelink.json

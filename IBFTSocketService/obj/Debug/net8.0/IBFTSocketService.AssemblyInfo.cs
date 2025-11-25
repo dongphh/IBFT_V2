@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("IBFT V2 Service")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf503a06855a5dfbe0913ad32f9f0caa24f53f47")]
 [assembly: System.Reflection.AssemblyProductAttribute("IBFTSocketService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IBFTSocketService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

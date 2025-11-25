@@ -2,7 +2,6 @@
 using IBFTSocketService.Core.Configuration;
 using IBFTSocketService.Data.Repository;
 using IBFTSocketService.Monitoring;
-using IBFTSocketService.Services;
 using Serilog;
 
 namespace SocketService
@@ -15,7 +14,7 @@ namespace SocketService
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Information()
                 .WriteTo.Console(outputTemplate: "[{Timestamp:yyyy-MM-dd HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}")
-                .WriteTo.File("logs/unified.log",
+                .WriteTo.File("logs/IBFT_V2_Service.log",
                     rollingInterval: RollingInterval.Infinite,
                     fileSizeLimitBytes: 200 * 1024 * 1024, // 200MB
                     retainedFileCountLimit: 10,
@@ -130,12 +129,6 @@ namespace SocketService
                     // Register monitoring
                     services.AddSingleton<PerformanceMonitor>();
                     services.AddSingleton<HealthCheckService>();
-
-                    // Register unified logger (consolidates all logs into single file with 200MB rolling)
-                    services.AddSingleton<UnifiedLogger>();
-                    
-                    // Register request/response logger (kept for backward compatibility)
-                    services.AddSingleton<RequestResponseLogger>();
 
                     // Register ILoggerFactory for creating typed loggers
                     services.AddSingleton<ILoggerFactory>(sp =>

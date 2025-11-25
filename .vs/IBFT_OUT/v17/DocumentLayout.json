@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "F:\\mastersource\\IBFT_V2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EFC0F3CC-F410-4957-8E95-33229B01D297}|IBFTSocketService\\IBFTSocketService.csproj|f:\\mastersource\\ibft_v2\\ibftsocketservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFC0F3CC-F410-4957-8E95-33229B01D297}|IBFTSocketService\\IBFTSocketService.csproj|solutionrelative:ibftsocketservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EFC0F3CC-F410-4957-8E95-33229B01D297}|IBFTSocketService\\IBFTSocketService.csproj|f:\\mastersource\\ibft_v2\\ibftsocketservice\\socketclienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EFC0F3CC-F410-4957-8E95-33229B01D297}|IBFTSocketService\\IBFTSocketService.csproj|solutionrelative:ibftsocketservice\\socketclienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{290AB9E7-1458-4C0B-8E94-28BB0E8BD519}|IBFTSocketService.LoadTester\\IBFTSocketService.LoadTester.csproj|f:\\mastersource\\ibft_v2\\ibftsocketservice.loadtester\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{290AB9E7-1458-4C0B-8E94-28BB0E8BD519}|IBFTSocketService.LoadTester\\IBFTSocketService.LoadTester.csproj|solutionrelative:ibftsocketservice.loadtester\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EFC0F3CC-F410-4957-8E95-33229B01D297}|IBFTSocketService\\IBFTSocketService.csproj|f:\\mastersource\\ibft_v2\\ibftsocketservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFC0F3CC-F410-4957-8E95-33229B01D297}|IBFTSocketService\\IBFTSocketService.csproj|solutionrelative:ibftsocketservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFC0F3CC-F410-4957-8E95-33229B01D297}|IBFTSocketService\\IBFTSocketService.csproj|f:\\mastersource\\ibft_v2\\ibftsocketservice\\ibft_v2_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFC0F3CC-F410-4957-8E95-33229B01D297}|IBFTSocketService\\IBFTSocketService.csproj|solutionrelative:ibftsocketservice\\ibft_v2_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +22,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SocketClientHandler.cs",
+              "DocumentMoniker": "F:\\mastersource\\IBFT_V2\\IBFTSocketService\\SocketClientHandler.cs",
+              "RelativeDocumentMoniker": "IBFTSocketService\\SocketClientHandler.cs",
+              "ToolTip": "F:\\mastersource\\IBFT_V2\\IBFTSocketService\\SocketClientHandler.cs",
+              "RelativeToolTip": "IBFTSocketService\\SocketClientHandler.cs",
+              "ViewState": "AgIAAG4BAAAAAAAAAAAowHgBAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T06:41:31.601Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -41,46 +54,29 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\mastersource\\IBFT_V2\\IBFTSocketService\\Program.cs",
-              "RelativeDocumentMoniker": "IBFTSocketService\\Program.cs",
-              "ToolTip": "F:\\mastersource\\IBFT_V2\\IBFTSocketService\\Program.cs",
-              "RelativeToolTip": "IBFTSocketService\\Program.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAADwvzoAAAAVAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "IBFT_V2_Service.cs",
+              "DocumentMoniker": "F:\\mastersource\\IBFT_V2\\IBFTSocketService\\IBFT_V2_Service.cs",
+              "RelativeDocumentMoniker": "IBFTSocketService\\IBFT_V2_Service.cs",
+              "ToolTip": "F:\\mastersource\\IBFT_V2\\IBFTSocketService\\IBFT_V2_Service.cs",
+              "RelativeToolTip": "IBFTSocketService\\IBFT_V2_Service.cs",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAAAOoAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T02:17:05.288Z",
+              "WhenOpened": "2025-11-25T06:40:47.101Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SocketClientHandler.cs",
-              "DocumentMoniker": "F:\\mastersource\\IBFT_V2\\IBFTSocketService\\SocketClientHandler.cs",
-              "RelativeDocumentMoniker": "IBFTSocketService\\SocketClientHandler.cs",
-              "ToolTip": "F:\\mastersource\\IBFT_V2\\IBFTSocketService\\SocketClientHandler.cs",
-              "RelativeToolTip": "IBFTSocketService\\SocketClientHandler.cs",
-              "ViewState": "AgIAAAMCAAAAAAAAAAAowNsBAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T01:11:26.266Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "F:\\mastersource\\IBFT_V2\\IBFTSocketService.LoadTester\\Program.cs",
-              "RelativeDocumentMoniker": "IBFTSocketService.LoadTester\\Program.cs",
-              "ToolTip": "F:\\mastersource\\IBFT_V2\\IBFTSocketService.LoadTester\\Program.cs",
-              "RelativeToolTip": "IBFTSocketService.LoadTester\\Program.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAiwDQAAAAgAAAAAAAAAA==",
+              "DocumentMoniker": "F:\\mastersource\\IBFT_V2\\IBFTSocketService\\Program.cs",
+              "RelativeDocumentMoniker": "IBFTSocketService\\Program.cs",
+              "ToolTip": "F:\\mastersource\\IBFT_V2\\IBFTSocketService\\Program.cs",
+              "RelativeToolTip": "IBFTSocketService\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAywBAAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T01:10:13.583Z",
+              "WhenOpened": "2025-11-25T06:38:02.845Z",
               "EditorCaption": ""
             }
           ]
