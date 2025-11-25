@@ -216,7 +216,7 @@ namespace SocketService
                 // ✅ LOG REQUEST WITH UNIQUE ID               
                 _logger.LogInformation("────────────────────────────────────────────────────────");
                 _logger.LogInformation("📨 REQUEST RECEIVED | LogID: {LogId} | Client: {ClientId} | Size: {BytesRead} bytes | Request body: {request}",
-                    logId,clientId, bytesRead,request);
+                    logId, clientId, bytesRead, request);
 
                 var sw = Stopwatch.StartNew();
                 string? response = null;
@@ -237,9 +237,9 @@ namespace SocketService
                     await SaveResponseToDbAsync(logId, response, sw.ElapsedMilliseconds, success);
 
                     // ✅ LOG RESPONSE WITH UNIQUE ID
-                    
+
                     _logger.LogInformation("📤 RESPONSE SENT | Client: {ClientId} | LogID: {LogId} | Status: SUCCESS | Time: {Time}ms | Response body: {response}",
-                        clientId,logId,sw.ElapsedMilliseconds,response);                    
+                        clientId, logId, sw.ElapsedMilliseconds, response);
                     _logger.LogInformation("────────────────────────────────────────────────────────");
                 }
                 catch (Exception ex)
@@ -255,12 +255,12 @@ namespace SocketService
                     await SaveResponseToDbAsync(logId, response, sw.ElapsedMilliseconds, false);
 
                     // ✅ LOG REQUEST/RESPONSE TO UNIFIED FILE (ERROR CASE - atomic, no interleaving)
-                   _logger.LogInformation(
-                        logId, clientId, request, bytesRead, response, sw.ElapsedMilliseconds, false);
+                    _logger.LogInformation(
+                         logId, clientId, request, bytesRead, response, sw.ElapsedMilliseconds, false);
 
                     _logger.LogInformation("────────────────────────────────────────────────────────");
                     _logger.LogInformation("❌ RESPONSE SENT | Client: {ClientId} | LogID: {LogId} | Status: ERROR | Time: {Time}ms",
-                        clientId,logId,sw.ElapsedMilliseconds);
+                        clientId, logId, sw.ElapsedMilliseconds);
                     //_logger.LogInformation("Client: {ClientId} | Status: ERROR | Time: {Time}ms",
                     //    clientId, sw.ElapsedMilliseconds);
                     _logger.LogInformation("────────────────────────────────────────────────────────");

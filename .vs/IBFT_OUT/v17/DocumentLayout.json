@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "F:\\mastersource\\IBFT_V2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EFC0F3CC-F410-4957-8E95-33229B01D297}|IBFTSocketService\\IBFTSocketService.csproj|f:\\mastersource\\ibft_v2\\ibftsocketservice\\socketclienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFC0F3CC-F410-4957-8E95-33229B01D297}|IBFTSocketService\\IBFTSocketService.csproj|solutionrelative:ibftsocketservice\\socketclienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EFC0F3CC-F410-4957-8E95-33229B01D297}|IBFTSocketService\\IBFTSocketService.csproj|f:\\mastersource\\ibft_v2\\ibftsocketservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EFC0F3CC-F410-4957-8E95-33229B01D297}|IBFTSocketService\\IBFTSocketService.csproj|solutionrelative:ibftsocketservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFC0F3CC-F410-4957-8E95-33229B01D297}|IBFTSocketService\\IBFTSocketService.csproj|f:\\mastersource\\ibft_v2\\ibftsocketservice\\ibft_v2_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFC0F3CC-F410-4957-8E95-33229B01D297}|IBFTSocketService\\IBFTSocketService.csproj|solutionrelative:ibftsocketservice\\ibft_v2_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,21 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SocketClientHandler.cs",
-              "DocumentMoniker": "F:\\mastersource\\IBFT_V2\\IBFTSocketService\\SocketClientHandler.cs",
-              "RelativeDocumentMoniker": "IBFTSocketService\\SocketClientHandler.cs",
-              "ToolTip": "F:\\mastersource\\IBFT_V2\\IBFTSocketService\\SocketClientHandler.cs",
-              "RelativeToolTip": "IBFTSocketService\\SocketClientHandler.cs",
-              "ViewState": "AgIAAG4BAAAAAAAAAAAowHgBAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T06:41:31.601Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -55,28 +34,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IBFT_V2_Service.cs",
-              "DocumentMoniker": "F:\\mastersource\\IBFT_V2\\IBFTSocketService\\IBFT_V2_Service.cs",
-              "RelativeDocumentMoniker": "IBFTSocketService\\IBFT_V2_Service.cs",
-              "ToolTip": "F:\\mastersource\\IBFT_V2\\IBFTSocketService\\IBFT_V2_Service.cs",
-              "RelativeToolTip": "IBFTSocketService\\IBFT_V2_Service.cs",
-              "ViewState": "AgIAAOEAAAAAAAAAAAAAAOoAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T06:40:47.101Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "F:\\mastersource\\IBFT_V2\\IBFTSocketService\\Program.cs",
               "RelativeDocumentMoniker": "IBFTSocketService\\Program.cs",
               "ToolTip": "F:\\mastersource\\IBFT_V2\\IBFTSocketService\\Program.cs",
               "RelativeToolTip": "IBFTSocketService\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAywBAAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T06:38:02.845Z",
+              "WhenOpened": "2025-11-25T08:03:01.614Z",
               "EditorCaption": ""
             }
           ]

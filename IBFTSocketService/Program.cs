@@ -27,12 +27,12 @@ namespace SocketService
             {
                 Log.Information("════════════════════════════════════════════════════");
                 Log.Information("🚀 Socket Service Starting");
-                Log.Information("Environment: {Environment}", 
+                Log.Information("Environment: {Environment}",
                     Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production");
                 Log.Information("════════════════════════════════════════════════════");
 
                 var host = CreateHostBuilder(args).Build();
-                
+
                 // Graceful shutdown handling
                 using (var cts = new CancellationTokenSource())
                 {
@@ -85,7 +85,7 @@ namespace SocketService
                     config
                         .SetBasePath(Directory.GetCurrentDirectory())
                         .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                        .AddJsonFile($"appsettings.{context.HostingEnvironment.EnvironmentName}.json", 
+                        .AddJsonFile($"appsettings.{context.HostingEnvironment.EnvironmentName}.json",
                             optional: true, reloadOnChange: true)
                         .AddEnvironmentVariables();
                 })
@@ -94,7 +94,7 @@ namespace SocketService
                     // Load configuration
                     var socketConfig = new SocketServerConfig();
                     var oracleConfig = new OraclePoolConfig();
-                    
+
                     context.Configuration.GetSection("SocketServer").Bind(socketConfig);
                     context.Configuration.GetSection("OraclePool").Bind(oracleConfig);
 
@@ -107,9 +107,9 @@ namespace SocketService
                     {
                         var logger = provider.GetRequiredService<ILogger<OracleConnectionPoolManager>>();
                         var config = provider.GetRequiredService<IConfiguration>();
-                        
+
                         var connectionString = config.GetConnectionString("OracleConnection");
-                        
+
                         if (string.IsNullOrEmpty(connectionString))
                         {
                             throw new InvalidOperationException(
@@ -118,7 +118,7 @@ namespace SocketService
 
                         var poolManager = OracleConnectionPoolManager.Instance;
                         poolManager.Initialize(connectionString, oracleConfig, logger);
-                        
+
                         logger.LogInformation("✓ Oracle Connection Pool Manager initialized successfully");
                         return poolManager;
                     });

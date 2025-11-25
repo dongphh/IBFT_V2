@@ -10,9 +10,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="logs\**" />
     <Compile Remove="Services\**" />
+    <Content Remove="logs\**" />
     <Content Remove="Services\**" />
+    <EmbeddedResource Remove="logs\**" />
     <EmbeddedResource Remove="Services\**" />
+    <None Remove="logs\**" />
     <None Remove="Services\**" />
   </ItemGroup>
 
@@ -36,10 +40,6 @@
     <PackageReference Include="Serilog.Extensions.Hosting" Version="9.0.0" />
     <PackageReference Include="Serilog.Sinks.Console" Version="6.1.1" />
     <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="logs\" />
   </ItemGroup>
 
 </Project>
