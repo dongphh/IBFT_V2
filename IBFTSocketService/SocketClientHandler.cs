@@ -21,12 +21,14 @@ namespace SocketService
         private readonly object _disposeLock = new object();
 
         public event EventHandler<ClientDisconnectEventArgs> OnDisconnect;
+        private readonly RemoteService _remoteService;
 
         public SocketClientHandler(
             Socket socket,
             IDataRepository repository,
             ILogger<SocketClientHandler> logger,
-            SocketServerConfig config)
+            SocketServerConfig config,
+            RemoteService remoteService)
         {
             _socket = socket;
             _repository = repository;
@@ -39,6 +41,7 @@ namespace SocketService
             _disconnectCalled = false;
 
             ConfigureSocket();
+            _remoteService = remoteService;
         }
 
         private void ConfigureSocket()
@@ -381,7 +384,10 @@ namespace SocketService
 
             // Simulate processing (in real scenario, this would process the transfer)
             await Task.Delay(50);
-
+            
+            // Forward request to Napas SocketService 
+            string partnerResponse = await _remoteService.SendRequestAsync(requestXml);
+            //return partnerResponse;
             return GenerateSuccessResponse(logId, externalRef, "SUCCESS");
         }
 

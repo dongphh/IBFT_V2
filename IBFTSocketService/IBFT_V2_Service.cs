@@ -24,6 +24,7 @@ namespace IBFTSocketService
         private readonly ConcurrentDictionary<string, SocketClientHandler> _clients;
         private Timer _statsTimer;
         private volatile bool _isShuttingDown;
+        private readonly RemoteService _remoteService;
 
         public IBFT_V2_Service(
             SocketServerConfig config,
@@ -31,7 +32,8 @@ namespace IBFTSocketService
             ILogger<IBFT_V2_Service> logger,
             ILoggerFactory loggerFactory,
             PerformanceMonitor monitor,
-            OracleConnectionPoolManager poolManager
+            OracleConnectionPoolManager poolManager,
+            RemoteService remoteService
             )
         {
             _config = config;
@@ -42,12 +44,16 @@ namespace IBFTSocketService
             _poolManager = poolManager;            
             _clients = new ConcurrentDictionary<string, SocketClientHandler>();
             _isShuttingDown = false;
+            _remoteService =remoteService;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
             try
             {
+                // Ensure RemoteService is connected before accepting clients
+                await _remoteService.EnsureConnectedAsync();
+
                 _listeningSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                 _listeningSocket.NoDelay = true;
                 _listeningSocket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
@@ -79,7 +85,7 @@ namespace IBFTSocketService
                             continue;
                         }
 
-                        _ = HandleClientConnectionAsync(clientSocket, stoppingToken);
+                        _ = HandleClientConnectionAsync(clientSocket, stoppingToken,_remoteService);
                     }
                     catch (OperationCanceledException)
                     {
@@ -191,7 +197,7 @@ namespace IBFTSocketService
             _logger.LogInformation("════════════════════════════════════════════════════");
         }
 
-        private async Task HandleClientConnectionAsync(Socket clientSocket, CancellationToken stoppingToken)
+        private async Task HandleClientConnectionAsync(Socket clientSocket, CancellationToken stoppingToken, RemoteService remoteService)
         {
             string clientId = clientSocket.RemoteEndPoint?.ToString() ?? "Unknown";
             SocketClientHandler handler = null;
@@ -201,7 +207,7 @@ namespace IBFTSocketService
                 // ✅ Create logger using ILoggerFactory
                 var clientLogger = _loggerFactory.CreateLogger<SocketClientHandler>();
 
-                handler = new SocketClientHandler(clientSocket, _repository, clientLogger, _config);
+                handler = new SocketClientHandler(clientSocket, _repository, clientLogger, _config,remoteService);
 
                 // Use try-catch to prevent exceptions in event handler from crashing
                 EventHandler<ClientDisconnectEventArgs> disconnectHandler = (s, e) =>

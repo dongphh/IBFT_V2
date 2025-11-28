@@ -19,6 +19,7 @@ namespace SocketService
                     fileSizeLimitBytes: 200 * 1024 * 1024, // 200MB
                     retainedFileCountLimit: 10,
                     rollOnFileSizeLimit: true,
+                    encoding: System.Text.Encoding.UTF8,
                     outputTemplate: "[{Timestamp:yyyy-MM-dd HH:mm:ss.fff} {Level:u3}] {Message:lj}{NewLine}{Exception}")
                 .Enrich.FromLogContext()
                 .CreateLogger();
@@ -141,6 +142,8 @@ namespace SocketService
 
                     // Register hosted services
                     services.AddHostedService<IBFT_V2_Service>();
+                    services.AddSingleton<RemoteService>();
+                    services.AddHostedService<RemoteService>();
                     services.AddHostedService<MonitoringService>();
                     services.AddHostedService<HealthCheckBackgroundService>();
                 })
