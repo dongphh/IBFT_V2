@@ -19,8 +19,8 @@ application.json
     "ConnectionTimeout": 60000,
     "IdleTimeout": 900000,
     "MaxRequestSize": 1048576,
-    "PartnerHost": "10.68.20.120",
-    "PartnerPort": 14130
+    "PartnerHost": "127.0.0.1",
+    "PartnerPort": 10000
   },
   "OraclePool": {
     "MaxPoolSize": 100,
