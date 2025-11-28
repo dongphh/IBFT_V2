@@ -9,6 +9,8 @@
         public int ConnectionTimeout { get; set; } = 30000; // 30s
         public int IdleTimeout { get; set; } = 300000; // 5 min
         public int MaxRequestSize { get; set; } = 1048576; // 1MB
+        public string PartnerHost { get; set; }
+        public int PartnerPort { get; set; }
 
     }
 }
